@@ -16,7 +16,7 @@ if not st.session_state.ingelogd:
     st.stop() 
 
 lijst_caption = []
-with open("Verzamelde foto's - Formulierreacties 1.csv") as bron:
+with open("bestand.csv") as bron:
     for regel in bron:
         foto_caption = regel.strip().split(",")
         lijst_caption.append(foto_caption[3])
@@ -69,4 +69,4 @@ with midden:
                 st.session_state.teller = random.randint(1, aantal_fotos)
                 st.rerun()
 
-    st.caption("Mocht er ergens een fout zijn, stuur een mail naar souhaib.ghaddoura@kadeurne.be")
+    st.caption("Mocht er ergens een fout zijn, stuur een mail naar @mail....")
